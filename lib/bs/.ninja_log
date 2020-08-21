@@ -1,0 +1,8 @@
+# ninja log v5
+# start_time end_time mtime command hash
+0	12	1597984577973477989	YourProjectName.cmi	f8b7b6cb24ffe133
+0	23	1597984577984366105	src/components/Greeting/Greeting.reast	3c29798b524c3bf1
+23	29	1597984577991564704	src/components/Greeting/Greeting.d	f216c3f39fbf1b2e
+29	50	1597984578011206351	src/components/Greeting/Greeting-YourProjectName.cmj	2365642168f325e4
+29	50	1597984578011206351	src/components/Greeting/Greeting-YourProjectName.cmi	2365642168f325e4
+29	50	1597984578011206351	/Users/woonki/Documents/projects/gatsby-reason-starter/src/components/Greeting/Greeting.bs.js	2365642168f325e4
