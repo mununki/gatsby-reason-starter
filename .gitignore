@@ -1,3 +1,9 @@
+# Apollo
+/lib
+.merlin
+.graphql_ppx_cache
+graphql_schema.json
+
 # Logs
 logs
 *.log

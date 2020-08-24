@@ -16,12 +16,15 @@
     "re:watch": "bsb -make-world -clean-world -w"
   },
   "dependencies": {
+    "@apollo/client": "^3.1.3",
     "gatsby": "^2.24.47",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "reason-apollo-client": "0.0.1-beta.7",
     "reason-react": "^0.9.1"
   },
   "devDependencies": {
+    "@reasonml-community/graphql-ppx": "^1.0.0-beta.22",
     "bs-platform": "^8.2.0",
     "prettier": "2.0.5"
   },

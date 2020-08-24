@@ -1,6 +1,6 @@
 import React from "react"
-import Greeting from "../components/Greeting"
+import App from "../components/App"
 
 export default () => {
-  return <Greeting />
+  return <App />
 }
