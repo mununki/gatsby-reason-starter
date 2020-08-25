@@ -15,7 +15,11 @@ module GetStores = [%graphql
 
 [@react.component]
 let make = () => {
-  switch (GetStores.use(GetStores.makeVariables(~skip=0, ~take=10, ()))) {
+  switch (
+    GetStores.use(
+      GetStores.GetStores_inner.makeVariables(~skip=0, ~take=10, ()),
+    )
+  ) {
   | {loading: true} => "Loading..."->React.string
   | {error: Some(error)} =>
     ("Error loading data" ++ error.message)->React.string

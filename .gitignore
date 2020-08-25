@@ -6,6 +6,10 @@ graphql_schema.json
 .bsb.lock
 *.bs.js
 
+# Dependency
+package-lock.json
+yarn.lock
+
 # Logs
 logs
 *.log

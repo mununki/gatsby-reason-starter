@@ -1,3 +1,6 @@
+[%raw "require('es6-promise')"];
+[%raw "require('isomorphic-fetch')"];
+
 let graphqlEndpoint = "http://localhost:8070/query";
 let graphqlWSEndpoint = "http://localhost:8070/ws";
 
@@ -18,19 +21,19 @@ let httpLink =
     (),
   );
 
-let wsLink =
-  ApolloClient.Link.WebSocketLink.(
-    make(
-      ~uri="ws://" ++ graphqlEndpoint,
-      ~options=
-        ClientOptions.make(
-          ~connectionParams=ConnectionParams(Obj.magic(headers)),
-          ~reconnect=true,
-          (),
-        ),
-      (),
-    )
-  );
+// let wsLink =
+//   ApolloClient.Link.WebSocketLink.(
+//     make(
+//       ~uri="ws://" ++ graphqlEndpoint,
+//       ~options=
+//         ClientOptions.make(
+//           ~connectionParams=ConnectionParams(Obj.magic(headers)),
+//           ~reconnect=true,
+//           (),
+//         ),
+//       (),
+//     )
+//   );
 
 let terminatingLink =
   ApolloClient.Link.split(
@@ -43,7 +46,8 @@ let terminatingLink =
         | None => false
         };
       },
-    ~whenTrue=wsLink,
+    // TODO: must implement & replace with wsLink with WsImplementation
+    ~whenTrue=httpLink,
     ~whenFalse=httpLink,
   );
 
